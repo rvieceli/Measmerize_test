@@ -1,0 +1,15 @@
+{
+  "name": "measmerize_test",
+  "version": "1.0.0",
+  "description": "## Overview",
+  "scripts": {
+    "transform": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.measmerize.com:development-tests/software-engineering-technical-assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
