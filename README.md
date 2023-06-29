@@ -92,3 +92,34 @@ JSON schemas for both the input and output have been provided if required.
 ## Good luck
 
 And don't forget to notify nasimi.mamedov@measmerize.com once you're done!
+
+
+## Solution
+
+My solution is very simple, and:
+1. it creates a Map, grouping all items by `parentId`, so `null` contains all root nodes. but still unsorted.
+2. for each Map item, a new Map is create, using `previousSiblingId` as key, so again, `null` is going to be the first child, sorting the children list.
+
+Processing files:
+1. All json files inside [input folder](/input) will be processed;
+2. Each flat array will be validated using the provided [schema](/schemas/input-schema.json);
+3. Each valid flat array will be transform in a tree
+4. Each tree will be validated using the provided [schema](/schemas//output-schema.json)
+5. Each valid tree will be saved be saved in the [output folder](/output)
+
+
+> I'm using Node (v18, npm: v8)
+
+First install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the command to transform list into trees:
+
+```bash
+npm run transform
+```
+
+The result in will [here](/output/)

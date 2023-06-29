@@ -54,4 +54,4 @@ function flatToTree(nodes) {
 //console.dir(flatToTree(nodes), { depth: null });
 
 
-module.exports = flatToTree;
+export default flatToTree;
